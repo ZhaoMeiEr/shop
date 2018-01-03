@@ -5,6 +5,7 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -21,7 +22,7 @@ public class LoginController {
 	private LoginService loginService;
 	@RequestMapping("/login")
 	@ResponseBody
-	public ResponseResult login(ResponseResult responseResult,String username,String password) {
+	public ResponseResult login(ResponseResult responseResult,@Validated String username,@Validated String password) {
 		try {
 			System.out.println("success!!");
 			Map<String, Object> login = loginService.loginQuery(username, password);

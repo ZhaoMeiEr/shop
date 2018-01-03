@@ -18,9 +18,9 @@
 <form action="${path}/loginHandle/login" method="post">
 
 		<label>用户名</label>
-		<input type="text" id="username">
+		<input type="text" id="username" name="username">
 		<label>密码</label>
-		<input type="password" id="password">
+		<input type="password" id="password" name="password">
 		<button type="submit">提交</button>
 		</form>
 		<!-- <button type="button" id="commit">提交</button> -->
