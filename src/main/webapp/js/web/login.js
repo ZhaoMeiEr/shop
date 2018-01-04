@@ -21,11 +21,11 @@ function login(){
 //			alert("请求失败");
 //		}
 //	})
-	Main.requestAjax("loginHandle/login",{username:$("#username").val(),password:$("#password").val()},function(data){
-		if(data.state=="success"){
-			window.location.href=path+"/success/";
+	$.post("loginHandle/login",{username:$("#username").val(),password:$("#password").val()},function(result){
+		if(result.state=="success"){
+			window.location.href="#/success";
 		}else{
 			alert("请求失败");
 		}
-	})
+	});
 }

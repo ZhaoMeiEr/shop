@@ -13,19 +13,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body ng-app='myApp'>
+<div ui-view></div>
 <input type="hidden" id="path" value="${path}">
-<form action="${path}/loginHandle/login" method="post">
-
 		<label>用户名</label>
 		<input type="text" id="username" name="username">
 		<label>密码</label>
 		<input type="password" id="password" name="password">
-		<button type="submit">提交</button>
-		</form>
-		<!-- <button type="button" id="commit">提交</button> -->
+		<button type="button" id="commit">提交</button>
 </body>
 <script src="js/lib/jquery-1.12.3.min.js"></script>
-<script src="js/lib/main.js"></script>
+<script src="js/lib/angularJs/angular.min.js"></script>
+<script
+	src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+	<script src="js/lib/angularJs/ocLazyLoad.min.js"></script>
+	 <script src="js/web/appConfig.js"></script>
+	<script src="js/web/appRoute.js"></script>
 <script src="js/web/login.js"></script>
 </html>
