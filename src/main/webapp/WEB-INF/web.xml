@@ -62,6 +62,6 @@
 	</listener>
 
 	<welcome-file-list>
-		<welcome-file>/jsp/login.jsp</welcome-file>
+		<welcome-file>/WEB-INF/page/index.htm</welcome-file>
 	</welcome-file-list>
 </web-app>
